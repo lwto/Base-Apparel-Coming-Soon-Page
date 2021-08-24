@@ -121,7 +121,7 @@ input{
 }
 
 @media screen and (min-width:376px){
-    .container{
+    .content-container{
         max-width:100vw;
     }
     .banner{  
@@ -160,16 +160,13 @@ input{
         background:$body-color;
     }
     .content-container{
-        max-width: 1200px;
-        overflow: hidden; 
+        max-width: 1400px; 
         border-radius: 10px; 
-        border: 0.5px solid hsla(0, 36%, 70%, .3);
-
+        //border: 0.5px solid hsl(0, 80%, 86%);
     }
 
     .banner{
         min-height: 800px;
-        max-width:610px;
     }
     .wrapper{
         background-image: url(../images/bg-pattern-desktop.svg);

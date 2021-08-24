@@ -125,7 +125,7 @@ input {
 }
 
 @media screen and (min-width: 376px) {
-  .container {
+  .content-container {
     max-width: 100vw;
   }
   .banner {
@@ -161,14 +161,11 @@ input {
     background: linear-gradient(135deg, white, #fff5f5);
   }
   .content-container {
-    max-width: 1200px;
-    overflow: hidden;
+    max-width: 1400px;
     border-radius: 10px;
-    border: 0.5px solid rgba(206, 151, 151, 0.3);
   }
   .banner {
     min-height: 800px;
-    max-width: 610px;
   }
   .wrapper {
     background-image: url(../images/bg-pattern-desktop.svg);
