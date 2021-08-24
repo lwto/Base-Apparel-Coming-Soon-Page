@@ -33,71 +33,73 @@ input {
 .wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 800px;
+  position: relative;
 }
 
-.header {
-  margin: 20px;
+.wrapper .header {
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
-.header img {
+.wrapper .header img {
   height: 20px;
+  padding-left: 30px;
 }
 
-.banner img {
-  display: block;
-  max-width: 100%;
-}
-
-.main {
+.wrapper .main .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 65px 30px;
+  margin: 0 30px;
 }
 
-.main h1 {
+.wrapper .main .content h1 {
   font-size: 2.5rem;
   letter-spacing: .5rem;
   line-height: 2.75rem;
 }
 
-.main h1:first-child {
+.wrapper .main .content h1:first-child {
   font-weight: 300;
 }
 
-.main h1:nth-child(2), .main h1:nth-child(3) {
+.wrapper .main .content h1:nth-child(2), .wrapper .main .content h1:nth-child(3) {
   color: #413a3a;
 }
 
-.main p {
+.wrapper .main .content p {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 30px;
   line-height: 1.5rem;
 }
 
-.main .input {
+.wrapper .main .content .input {
   display: flex;
   border: 0.5px solid rgba(206, 151, 151, 0.3);
   border-radius: 30px;
   width: 100%;
   padding: 10px 20px;
   position: relative;
+  margin-bottom: 50px;
 }
 
-.main .input ::placeholder {
+.wrapper .main .content .input ::placeholder {
   color: #ce9797;
   opacity: 0.5;
   font-size: 0.938rem;
 }
 
-.main .input input {
+.wrapper .main .content .input input {
   height: 30px;
   width: 100%;
 }
 
-.main .input button {
+.wrapper .main .content .input button {
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   height: 50px;
   width: 70px;
@@ -108,10 +110,24 @@ input {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.footer .attribution {
+.wrapper .main .footer {
+  margin: 0;
+}
+
+.wrapper .main .footer .attribution {
   font-size: 0.75rem;
   text-align: center;
   padding: 5px;
+}
+
+.banner {
+  position: absolute;
+  top: 60px;
+}
+
+.banner img {
+  display: block;
+  max-width: 100%;
 }
 
 @media screen and (min-width: 576px) {

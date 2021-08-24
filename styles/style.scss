@@ -35,85 +35,97 @@ input{
 .wrapper{
     display:flex;
     flex-direction: column;
-    
-}
+    justify-content: space-between;
+    min-height:800px;
+    position:relative;
 
-.header{
-    margin:20px;  
-    img{
-        height:20px;
+    .header{ 
+        height:60px; 
+        display:flex;
+        align-items: center;
+        img{
+            height: 20px;
+            padding-left:30px;
+        }
+    }
+
+    .main{
+        .content{
+
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 30px;
+        
+            h1{
+                font-size: $biggest-font-size;
+                letter-spacing: .5rem;
+                line-height: 2.75rem;
+            }
+            h1:first-child{
+                font-weight: $font-light;
+            }
+            h1:nth-child(2), h1:nth-child(3){
+                color:$first-color-alt;
+            }
+            p{
+                text-align: center;
+                padding-top:20px;
+                padding-bottom: 30px;
+                line-height: 1.5rem;
+            }
+            .input{
+                display:flex;
+                border: 0.5px solid hsla(0, 36%, 70%, .3);
+                border-radius: 30px;
+                width:100%;
+                padding:10px 20px;
+                position:relative;
+                margin-bottom: 50px;
+                ::placeholder{
+                    color:$first-color;
+                    opacity:0.5;
+                    font-size: $normal-font-size;
+                }
+                input{
+                    height:30px;
+                    width:100%;    
+                }
+                button{
+                    background: $button-color;
+                    height:50px;
+                    width:70px;
+                    border-radius: 25px;
+                    position:absolute;
+                    right:0px;
+                    top:0px;       
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                }
+            }
+        }
+        .footer{
+            margin:0;
+            .attribution { 
+                font-size: $smaller-font-size; 
+                text-align: center; 
+                padding:5px;
+            }
+        }
     }
 }
-.banner{  
     
+.banner{  
+    position:absolute;
+    top:60px;
     img{
         display:block;
         max-width: 100%;    
     }
 }
-.main{
 
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 65px 30px;
 
-    h1{
-        font-size: $biggest-font-size;
-        letter-spacing: .5rem;
-        line-height: 2.75rem;
-    }
-    h1:first-child{
-        font-weight: $font-light;
-    }
-    h1:nth-child(2), h1:nth-child(3){
-        color:$first-color-alt;
-    }
-    p{
-        text-align: center;
-        padding-top:20px;
-        padding-bottom: 30px;
-        line-height: 1.5rem;
-    }
-    .input{
-        display:flex;
-        border: 0.5px solid hsla(0, 36%, 70%, .3);
-        border-radius: 30px;
-        width:100%;
-        padding:10px 20px;
-        position:relative;
-        ::placeholder{
-            color:$first-color;
-            opacity:0.5;
-            font-size: $normal-font-size;
-        }
-        input{
-            height:30px;
-            width:100%;    
-            
-        }
-        button{
-            background: $button-color;
-            height:50px;
-            width:70px;
-            border-radius: 25px;
-            position:absolute;
-            right:0px;
-            top:0px;       
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-    }
-}
 
-.footer{
-
-    .attribution { 
-        font-size: $smaller-font-size; 
-        text-align: center; 
-        padding:5px;
-    }
-}
 
 @media  screen and (min-width: 576px) {
     body{
