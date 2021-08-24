@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+@import "variables";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $body-font;
+    font-size: $normal-font-size;
+    background-color: $body-color;
+    color:$first-color;
+    background:$body-color;
+}
+
+a{
+    text-decoration: none;
+    color: $first-color-alt;
+}
+input,button{
+    border:none;
+}
+
+input{
+    outline: none;
+}
+
+.container{
+   max-width: 375px; 
+}
+
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.header{
+    margin:20px;  
+    img{
+        height:20px;
+    }
+}
+.banner{  
+    
+    img{
+        display:block;
+        max-width: 100%;    
+    }
+}
+.main{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 65px 30px;
+
+    h1{
+        font-size: $biggest-font-size;
+        letter-spacing: .5rem;
+        line-height: 2.75rem;
+    }
+    h1:first-child{
+        font-weight: $font-light;
+    }
+    h1:nth-child(2), h1:nth-child(3){
+        color:$first-color-alt;
+    }
+    p{
+        text-align: center;
+        padding-top:20px;
+        padding-bottom: 30px;
+        line-height: 1.5rem;
+    }
+    .input{
+        display:flex;
+        border: 0.5px solid hsla(0, 36%, 70%, .3);
+        border-radius: 30px;
+        width:100%;
+        padding:10px 20px;
+        position:relative;
+        ::placeholder{
+            color:$first-color;
+            opacity:0.5;
+            font-size: $normal-font-size;
+        }
+        input{
+            height:30px;
+            width:100%;    
+            
+        }
+        button{
+            background: $button-color;
+            height:50px;
+            width:70px;
+            border-radius: 25px;
+            position:absolute;
+            right:0px;
+            top:0px;       
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+}
+
+.footer{
+
+    .attribution { 
+        font-size: $smaller-font-size; 
+        text-align: center; 
+        padding:5px;
+    }
+}
+
+@media  screen and (min-width: 576px) {
+    body{
+        //overflow-y:hidden;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-position: left;
+    }
+    .container{
+        max-width:100vw;
+    }
+    .wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        div{
+            
+        }
+    }
+    .banner{
+        flex:0.6;
+        img{
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+    .main{
+        flex-basis: 100%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
