@@ -27,8 +27,12 @@ input{
     outline: none;
 }
 
-.container{
+
+.content-container{
    max-width: 375px; 
+   display:flex;
+   align-items: center;
+   justify-content: center;
 }
 
 
@@ -90,7 +94,8 @@ input{
                 }
                 input{
                     height:30px;
-                    width:100%;    
+                    width:100%;
+                    background: transparent;    
                 }
                 button{
                     background: $button-color;
@@ -114,47 +119,102 @@ input{
         }
     }
 }
-    
-.banner{  
-    position:absolute;
-    top:60px;
-    img{
-        display:block;
-        max-width: 100%;    
-    }
-}
 
-
-
-
-@media  screen and (min-width: 576px) {
-    body{
-        //overflow-y:hidden;
-        background-image: url(../images/bg-pattern-desktop.svg);
-        background-position: left;
-    }
+@media screen and (min-width:376px){
     .container{
         max-width:100vw;
     }
-    .wrapper{
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        div{
+    .banner{  
+        height:320px;
+        width:100%;
+
+        img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+            object-position: top;
             
         }
     }
-    .banner{
-        flex:0.6;
+}
+
+@media screen and (max-width: 767.89px) {
+    .banner{  
+        position:absolute;
+        top:60px;
         img{
-            object-fit: cover;
-            overflow: hidden;
+            display:block;
+            max-width: 100%;    
         }
     }
-    .main{
-        flex-basis: 100%;
+}
+
+@media  screen and (min-width: 768px) {
+
+    .container{
+        height: 100vh;
+        width:100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:$body-color;
+    }
+    .content-container{
+        max-width: 1200px;
+        overflow: hidden; 
+        border-radius: 10px; 
+        border: 0.5px solid hsla(0, 36%, 70%, .3);
+
     }
 
+    .banner{
+        min-height: 800px;
+        max-width:610px;
+    }
+    .wrapper{
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-position: left center;
+        justify-content: center;
+        .header{
+            margin:30px 60px 0 60px;
+            img{
+                height:30px;
+            }
+        }
+        .main{
+            flex-grow: 1;
+            margin:80px 60px;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .content{
+                align-items: start;
+              
+                h1{
+                    font-size: 3.5rem;
+                    line-height: 4rem;
+                }
+                p{
+                    text-align: start;
+                    font-size: 1rem;
+                    line-height: 1.75rem;
+                }
+                ::placeholder{
+                    font-size: 1rem;
+                }
+                .input{
+                    margin-bottom: 0;
+                   button{
+                       width:100px;
+                   }
+                }
+              
+            }
+        }
+    }
 
 }
 

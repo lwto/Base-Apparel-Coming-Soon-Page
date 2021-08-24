@@ -13,49 +13,58 @@
 </head>
 
 <body>
-    <div class="container wrapper">
-
-        <div class="header">
-            <img src="images/logo.svg" alt="logo">
-        </div>
-
-        <div class="main">
-            <div class="content">
-                <h1>WE'RE</h1>
-                <h1>COMING</h1>
-                <h1>SOON</h1>
-                <p>
-                    Hello fellow shoppers! We're currently building our new fashion store. Add your email
-                    below to stay up-to-date with announcements and our launch deals.
-                </p>
-                <div class="input">
-                    <input type="text" placeholder="Email Address">
-                    <button>
-                        <img src="images/icon-arrow.svg" alt="arrow">
-                    </button>
+    <div class="container">
+        <div class="content-container">
+            <div class="wrapper">
+                <div class="header">
+                    <img src="images/logo.svg" alt="logo">
                 </div>
+
+                <div class="main">
+                    <div class="content">
+                        <h1>WE'RE</h1>
+                        <h1>COMING</h1>
+                        <h1>SOON</h1>
+                        <p>
+                            Hello fellow shoppers! We're currently building our new fashion store. Add your email
+                            below to stay up-to-date with announcements and our launch deals.
+                        </p>
+                        <div class="input">
+                            <form action="" name="myform" method="post" onsubmit="return emailValidate();">
+                                <div class="validation">
+                                    <input type="text" placeholder="Email Address" id="email">
+                                </div>
+                                <button type="submit">
+                                    <img src="images/icon-arrow.svg" alt="arrow">
+                                </button>
+                        </div>
+                        </form>
+                    </div>
+
+                    <div class="footer">
+                        <p class="attribution">
+                            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+                                Mentor</a>.
+                            Coded by <a href="#">Wathan</a>.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="footer">
-                <p class="attribution">
-                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
-                        Mentor</a>.
-                    Coded by <a href="#">Wathan</a>.
-                </p>
+            <div class="banner">
+                <picture>
+                    <source media="(max-width:375px" srcset="images/hero-mobile.jpg">
+                    <img src="images/hero-desktop.jpg" alt="">
+
+                </picture>
             </div>
 
         </div>
-
-
     </div>
-    <div class="banner">
-        <picture>
-            <source media="(max-width:375px" srcset="images/hero-mobile.jpg">
-            <img src="images/hero-desktop.jpg" alt="">
-        </picture>
-    </div>
-
-
+    <!-- JS -->
+    <script src="./javascript/main.js"></script>
 </body>
 
 </html>
