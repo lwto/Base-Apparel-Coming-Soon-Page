@@ -79,32 +79,31 @@ input{
                 padding-bottom: 30px;
                 line-height: 1.5rem;
             }
-            .input{
-                display:flex;
-                border: 0.5px solid hsla(0, 36%, 70%, .3);
-                border-radius: 30px;
+            .input{       
                 width:100%;
-                padding:10px 20px;
-                position:relative;
                 margin-bottom: 50px;
+                position: relative;
                 ::placeholder{
                     color:$first-color;
                     opacity:0.5;
                     font-size: $normal-font-size;
                 }
                 input{
-                    height:30px;
+                    border: 0.5px solid hsla(0, 36%, 70%, .3);
+                    border-radius: 30px;
                     width:100%;
-                    background: transparent;    
+                    padding:10px 20px;    
+                    background: transparent;   
+                    position:relative; 
                 }
                 button{
+                    position: absolute;
+                    right:10px;
+                    top:0;
                     background: $button-color;
-                    height:50px;
-                    width:70px;
-                    border-radius: 25px;
-                    position:absolute;
-                    right:0px;
-                    top:0px;       
+                    height:38px;
+                    width:60px;
+                    border-radius: 20px;       
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 }
             }
@@ -205,7 +204,7 @@ input{
                 .input{
                     margin-bottom: 0;
                    button{
-                       width:100px;
+                       width:65px;
                    }
                 }
               
@@ -214,6 +213,39 @@ input{
     }
 
 }
+
+.form-control{
+    width:90%;
+    display:flex;
+    align-items: center;
+    small{
+        position:absolute;
+        bottom:-20px;
+        left:20px;
+        visibility: hidden;
+    }
+    .icon{
+        position: absolute;
+        right: 80px;
+        visibility: hidden;
+    }
+}
+
+.wrapper .main .content{
+    .input{
+        .form-control.error input{
+            border-color: $second-color;
+            
+        }
+        .form-control.error .icon{
+            visibility: visible;
+        }
+        .form-control.error small{
+            visibility: visible;
+        }
+    }
+}
+
 
 
 

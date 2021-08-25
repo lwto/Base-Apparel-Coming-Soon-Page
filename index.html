@@ -29,15 +29,17 @@
                             Hello fellow shoppers! We're currently building our new fashion store. Add your email
                             below to stay up-to-date with announcements and our launch deals.
                         </p>
-                        <div class="input">
-                            <form action="" name="myform" method="post" onsubmit="return emailValidate();">
-                                <div class="validation">
-                                    <input type="text" placeholder="Email Address" id="email">
-                                </div>
-                                <button type="submit">
-                                    <img src="images/icon-arrow.svg" alt="arrow">
-                                </button>
-                        </div>
+                        <form class="input form" id="form">
+
+                            <div class="form-control ">
+                                <input type="text" placeholder="Email Address" id="email" onfocus="this.value=''">
+                                <img class="icon" src="images/icon-error.svg" alt="error">
+                                <small>Error message</small>
+                            </div>
+                            <button>
+                                <img src="images/icon-arrow.svg" alt="arrow">
+                            </button>
+
                         </form>
                     </div>
 
@@ -64,7 +66,7 @@
         </div>
     </div>
     <!-- JS -->
-    <!-- <script src="./javascript/main.js"></script> -->
+    <script src="./javascript/main.js"></script>
 </body>
 
 </html>

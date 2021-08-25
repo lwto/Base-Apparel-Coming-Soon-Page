@@ -1,32 +1,36 @@
-const email = document.myform.email.value;
-const valiDate = document.querySelector('validation');
-const input = document.querySelector('input');
+const form = document.getElementById('form')
+const email = document.getElementById('email')
 
-// function validate() {
-//     var atposition = x.indexOf("@");
-//     var dotposition = x.lastIndexOf(".");
-//     if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
-//         valiDate.innerHTML =
-//             ` 
-//     <img src="../images/icon-error.svg>
-//     `
-//         input.classList.add('invalid');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-//         return false;
-//     }
-// }
+    checkInputs();
+})
 
-function emailValidate() {
-    if (email == "") {
-        printError("emailErr", "Please enter your email address");
+function checkInputs() {
+    const emailValue = email.value.trim();
+    if (emailValue === '') {
+        setErrorFor(email, 'Please provide a valid email')
+    } else if (!isEmail(emailValue)) {
+        setErrorFor(email, 'Please provide a valid email');
     } else {
-        // Regular expression for basic email validation
-        var regex = /^\S+@\S+\.\S+$/;
-        if (regex.test(email) === false) {
-            alert("emailErr", "Please enter a valid email address");
-        } else {
-            printError("emailErr", "");
-            emailErr = false;
-        }
+        const formControl = email.parentElement
+        formControl.classList.remove('error')
+        console.log('success')
+
     }
+
+}
+
+function setErrorFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small')
+
+    small.innerText = message;
+
+    formControl.className = 'form-control error'
+}
+
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }

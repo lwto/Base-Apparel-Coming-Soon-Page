@@ -82,13 +82,9 @@ input {
 }
 
 .wrapper .main .content .input {
-  display: flex;
-  border: 0.5px solid rgba(206, 151, 151, 0.3);
-  border-radius: 30px;
   width: 100%;
-  padding: 10px 20px;
-  position: relative;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .wrapper .main .content .input ::placeholder {
@@ -98,19 +94,22 @@ input {
 }
 
 .wrapper .main .content .input input {
-  height: 30px;
+  border: 0.5px solid rgba(206, 151, 151, 0.3);
+  border-radius: 30px;
   width: 100%;
+  padding: 10px 20px;
   background: transparent;
+  position: relative;
 }
 
 .wrapper .main .content .input button {
-  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  height: 50px;
-  width: 70px;
-  border-radius: 25px;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 10px;
+  top: 0;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  height: 38px;
+  width: 60px;
+  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -207,6 +206,37 @@ input {
     margin-bottom: 0;
   }
   .wrapper .main .content .input button {
-    width: 100px;
+    width: 65px;
   }
+}
+
+.form-control {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  visibility: hidden;
+}
+
+.form-control .icon {
+  position: absolute;
+  right: 80px;
+  visibility: hidden;
+}
+
+.wrapper .main .content .input .form-control.error input {
+  border-color: #f96262;
+}
+
+.wrapper .main .content .input .form-control.error .icon {
+  visibility: visible;
+}
+
+.wrapper .main .content .input .form-control.error small {
+  visibility: visible;
 }
